@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TextField
+@{
+    ViewBag.Title = Model.MetаTitle;
+    ViewBag.Description = Model.MetaDiscription;
+    ViewBag.Keywords = Model.Text;
+}
+
+<div class="div-box">
+    <div class="image-block">
+        <img src="~/images/@Model.TitleImagePath" />
+    </div>
+    <h4>@Html.Raw(Model.Text)</h4>
+
+
+</div>

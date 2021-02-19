@@ -1,0 +1,55 @@
+﻿<!-- Header -->
+<div id="header-wrapper">
+    <div class="container">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <h1><a href="/" id="logo">@Config.CompaniName</a></h1>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        @*<li class="current_page_item"><a href="index.html">На главнаю</a></li>*@
+                        @*пока не меняла Список*@
+                        <!--<li>
+                            <a href="#">Cписок</a>
+                            <ul>
+                                <li><a href="#">Наши клиенты</a></li>
+                                <li><a href="#">Наше оборудование</a></li>
+                                <li>
+                                    <a href="#">Наши специалисты</a>
+                                    <ul>
+                                        <li><a href="#">Геодезисты</a></li>
+                                        <li><a href="#">Кадастровые инжинеры</a></li>
+                                        <li><a href="#">Сметчики</a></li>
+                                        <li><a href="#">Инжинеры ПТО</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Выполненные объекты</a></li>
+                            </ul>
+                        </li>-->
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                        <li><a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">наши услуги</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <div id="banner">
+            <h2>
+                <strong>@Config.CompaniName:</strong> Для нас нет невыпонимых задач
+                <br />
+                
+            </h2>
+            <p>Здесь будет регистрация-нереализована</p>
+            <a href="#" class="button large icon solid fa-check-circle">Yes it does</a>
+        </div>
+        
+    </div>
+</div>

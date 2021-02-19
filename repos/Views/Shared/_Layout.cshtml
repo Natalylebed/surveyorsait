@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+        @await Html.PartialAsync("CssPartial");
+    @await Html.PartialAsync("MetaTagsPartial");
+</head>
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+        @await Html.PartialAsync("HeaderPartial")
+
+        <!-- Main Wrapper -->
+        <div id="main-wrapper">
+            <div class="container">
+                <div class="row main-row">
+                    <div class="col-8 col-12-medium">
+
+                        @RenderBody()
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("MainFooterPartial");
+
+
+
+        @await Html.PartialAsync("FooterPartial")
+
+    </div>
+
+                @await Html.PartialAsync("ScriptPartial");
+
+</body>
+</html>

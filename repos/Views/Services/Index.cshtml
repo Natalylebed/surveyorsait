@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IQueryable<ServiceItem>
+
+@*@{
+    TextField textField = ViewBag.TextField;
+
+    //ViewBag.Title = textField.MetаTitle;
+    ViewBag.Description = textField.MetaDiscription;
+    ViewBag.Keywords = textField.MetaKeywords;
+}*@
+
+<div>
+    @if (Model.Any())
+    {
+        <ul class="divided">
+
+            @foreach (ServiceItem entity in Model)
+            {
+                <li>
+                    <a  class="image left" asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                        <img  src="~/images/@entity.TitleImagePath" alt="" />
+                    </a>
+                    <h4> @entity.Title </h4>
+                    <p>@entity.Subtitle</p>
+                </li>
+            }
+        </ul>
+       }
+</div>

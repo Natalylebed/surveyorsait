@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ServiceItem
+@{
+
+    ViewBag.Text = Model.Text;
+    ViewBag.Title = Model.MetаTitle;
+    ViewBag.Description = Model.MetaDiscription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+
+<div class="div-box">
+    <h2>
+        @Model.Title
+    </h2>
+    <h4>
+        @Model.Subtitle
+
+    </h4>
+    <p> @Html.Raw(Model.Text)</p>
+
+    <div class="image-block">
+        <img src="~/images/@Model.TitleImagePath" />
+    </div>
+
+
+
+</div>
+
